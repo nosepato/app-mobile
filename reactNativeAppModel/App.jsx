@@ -5,7 +5,7 @@ import Person from './components/Person';
 export default function App() {
   return (
     <View style={styles.container}>
-        <Person nome="Felipe" idade="27" telefone="(81) 99999-9999"/>
+        <Person nome="A ARTE DA GUERRA" autor="SUN TZU" genero="TRATADO, NÃO FICÇÃO"/>
     </View>
   );
 }
