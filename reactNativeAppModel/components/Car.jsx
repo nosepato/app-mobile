@@ -4,7 +4,8 @@ import { View, Text } from 'react-native'
 const Car = (props) => {
     return (
         <View>
-            <Text> O carro {props.name}</Text>
+            {props.name && <Text>O nome do carro é {props.name}</Text>}
+            {!props.name && <Text>Carro não identificado</Text>}
         </View>
     )
 }

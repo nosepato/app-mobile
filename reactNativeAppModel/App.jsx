@@ -1,28 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { useState } from 'react/cjs/react.development';
 import Car from './components/Car';
 import Person from './components/Person';
 
 export default function App() {
+  const [nameCar, setNameCar] = useState('')
   const [value, setValue] = useState(false)
-
   return (
     <View style={styles.container}>
+      <TextInput 
+        placeholder='Digite o nome do carro'
+        onChangeText={setNameCar}
+        >     
+      </TextInput>
+      <Button 
+        title='Registrar'
+        onPress={() => {setValue(true)}}>
+      </Button>
       <Text>
-        {/* Person nome="A ARTE DA GUERRA" autor="SUN TZU" genero="TRATADO, NÃO FICÇÃO" */}
-        < Car name="Monza"/>
+        {value && 'O nome do carro é ' + nameCar}
       </Text>
-      <Button title={value ? 'Tanque cheio!' : 'Encher tanque'}
-        onPress={() => {setValue(true)}}
-        disabled={value}
-      >
-      </Button>
-      <Button title='Esvaziar tanque'
-        disabled={!value}
-        onPress={() =>{setValue(false)}}
-      >
-      </Button>
     </View>
   );
 }
