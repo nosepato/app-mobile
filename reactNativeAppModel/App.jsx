@@ -1,26 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { useState } from 'react/cjs/react.development';
-import Car from './components/Car';
-import Person from './components/Person';
+import Notas from './components/Notas';
+
 
 export default function App() {
-  const [nameCar, setNameCar] = useState('')
-  const [value, setValue] = useState(false)
+  const [nameAluno, setNameAluno] = useState()
+  const [nota, setNota] = useState()
+  const [resultado, setResultado] = useState(false)
+
   return (
     <View style={styles.container}>
       <TextInput 
-        placeholder='Digite o nome do carro'
-        onChangeText={setNameCar}
-        >     
+        placeholder='Digite seu nome' onChangeText={setNameAluno}>
+      </TextInput>
+      <TextInput 
+        placeholder='Digite sua nota' onChangeText={setNota}>
       </TextInput>
       <Button 
-        title='Registrar'
-        onPress={() => {setValue(true)}}>
+        title='Enviar' onPress={() => {setResultado(true)}}>
       </Button>
-      <Text>
-        {value && 'O nome do carro é ' + nameCar}
-      </Text>
+      {resultado && <Notas nota={nota} name={nameAluno}/>}
     </View>
   );
 }
