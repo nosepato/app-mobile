@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const GeneralQuizScreen = () => {
+const FutebolScreen = () => {
   return (
-    <View>
-      <Text>GeneralQuizScreen</Text>
+    <View style={styles.container}>
+       <Text>Teste</Text>
     </View>
   )
 }
 
-export default GeneralQuizScreen
+export default FutebolScreen
 
 const styles = StyleSheet.create({})

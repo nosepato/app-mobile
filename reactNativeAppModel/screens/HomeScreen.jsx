@@ -9,29 +9,16 @@ const HomeScreen = ({navigation}) => {
             <Text style={styles.text}>Bem vindo ao Quiz!</Text>
             <Text style={styles.text}>Selecione uma das categorias abaixo</Text>
             <View>
+            
+              
                 <Button
-                title='Conhecimentos Gerais'
-                onPress={() => {navigation.navigate("Conhecimentos Gerais")}}
+                title='Futebol'
+                onPress={() => {navigation.navigate("Futebol")}}
                 />
+                
                 <Button
-                title='Geografia'
-                onPress={() => {navigation.navigate("Geografia")}}
-                />
-                <Button
-                title='História'
-                onPress={() => {navigation.navigate("História")}}
-                />
-                <Button
-                title='Esportes'
-                onPress={() => {navigation.navigate("Esportes")}}
-                />
-                <Button
-                title='Desenhos'
-                onPress={() => {navigation.navigate("Desenhos")}}
-                />
-                <Button
-                title='Filmes'
-                onPress={() => {navigation.navigate("Filmes")}}
+                title='Basquete'
+                onPress={() => {navigation.navigate("Basquete")}}
                 />
                 <Button
                 title='Sobre'
