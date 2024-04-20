@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native-web'
 
 const BasqueteScreen = () => {
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View>
        <Text> QUIZ </Text>
@@ -17,7 +18,7 @@ const BasqueteScreen = () => {
        <Button title='Golden State'/>
        <Button title='Chicago Bulls'/>
        <Button title='Boston Celtics'/>
-       <Button title='Lakers*'/>
+       <Button title='Lakers*' color="green"/>
        </View>
 
        <View>
@@ -65,6 +66,7 @@ const BasqueteScreen = () => {
        </View>
 
     </View>
+    </ScrollView>
   )
 }
 
