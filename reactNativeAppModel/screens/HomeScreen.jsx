@@ -9,20 +9,26 @@ const HomeScreen = ({navigation}) => {
             <Text style={styles.text}>Bem vindo ao Quiz!</Text>
             <Text style={styles.text}>Selecione uma das categorias abaixo</Text>
             <View style={styles.buttonContainer}>
+                <View style={[styles.viewButton, {flex: 1}]}>
                 <Button
                 title='Futebol'
-                onPress={() => {navigation.navigate("Futebol")}} style={styles.button}
+                onPress={() => {navigation.navigate("Futebol")}}
                 />
+                </View>
                 <View style={styles.space}></View>
+                <View style={[styles.viewButton, {flex: 1}]}>
                 <Button
                 title='Basquete'
-                onPress={() => {navigation.navigate("Basquete")}} style={styles.button}
+                onPress={() => {navigation.navigate("Basquete")}}
                 />
+                </View>
                 <View style={styles.space}></View>
+                <View style={[styles.viewButton, {flex: 1}]}>
                 <Button
                 title='Sobre'
-                onPress={() => {navigation.navigate("Sobre")}} style={styles.button}
+                onPress={() => {navigation.navigate("Sobre")}}
                 />
+            </View>
             </View>
         </View>
     )
@@ -35,17 +41,21 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         padding: 20,
+        backgroundColor: 'black'
     },
     text: {
         fontSize: '1.5em',
         textAlign: 'center',
+        color: 'white'
     },
     buttonContainer: {
         alignItems: 'center',
         padding: 20
     },
-    button: {
-        marginBottom: 10
+    viewButton: {
+        width: 150,
+        borderRadius: 15, 
+        overflow: 'hidden'
     },
     space: {
         height: 10
