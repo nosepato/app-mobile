@@ -4,6 +4,7 @@ import { ScrollView } from 'react-native-web'
 
 const FutebolScreen = () => {
   return (
+    <ScrollView>
     <View style={styles.container}>
       <View>
        <Text> QUIZ </Text>
@@ -63,8 +64,8 @@ const FutebolScreen = () => {
        <Button title='3'/>
        <Button title='1'/>
        </View>
-
     </View>
+    </ScrollView>
     
   )
 }
