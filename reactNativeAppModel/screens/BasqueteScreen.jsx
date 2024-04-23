@@ -113,10 +113,8 @@ const BasqueteScreen = () => {
        <View style={[styles.viewButton, {flex: 1}]}>
        <Button title='10'/>
        </View>
-       <View style={styles.space}></View>
-       <View style={styles.space}></View>
-       <View style={styles.space}></View>
-       <View style={styles.space}></View>
+       <View style={styles.space2}></View>
+
        </View>
 
        <View style={[styles.viewButtonFinish, {flex:1}]}>
@@ -160,5 +158,8 @@ viewButtonFinish: {
 },
 space: {
     height: 10
+},
+space2: {
+    height: 50
 }
 })

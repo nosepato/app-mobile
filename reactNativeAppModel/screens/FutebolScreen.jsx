@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
-import React from 'react'
-import { ImageBackground, ScrollView } from 'react-native-web'
+import React, { useState } from 'react'
+import { ImageBackground, Modal, ScrollView } from 'react-native-web'
 
 const FutebolScreen = () => {
+  const [isCorrectAnswer, setCorrectAnswer] = useState(false)
+  const [isIncorrectAnswer, setIncorrectAnswer] = useState(false)
+  
   return (
     <ScrollView>
     <View style={styles.container}>
@@ -13,7 +16,10 @@ const FutebolScreen = () => {
 
        <View style={styles.buttonContainer}>
        <View style={[styles.viewButton, {flex: 1}]}>
-       <Button title='Bayer de Munique'/>
+       <Button color= {isIncorrectAnswer ? 'red' : 'blue'}title='Bayern Munich' style={styles.button} onPress={() => {
+        
+        setIncorrectAnswer(true)
+       }}/>
        </View>
        <View style={styles.space}></View>
        <View style={[styles.viewButton, {flex: 1}]}>
@@ -21,11 +27,14 @@ const FutebolScreen = () => {
        </View>
        <View style={styles.space}></View>
        <View style={[styles.viewButton, {flex: 1}]}>
-       <Button title='Real Madrid*'/>
+       <Button color= {isCorrectAnswer ? 'green' : 'blue'}title='Real Madrid' onPress={() => {
+        
+        setCorrectAnswer(true)
+       }}/>
        </View>
        <View style={styles.space}></View>
        <View style={[styles.viewButton, {flex: 1}]}>
-       <Button title='Milan'/>
+       <Button title=' AC Milan'/>
        </View>
        </View>
 
@@ -115,10 +124,8 @@ const FutebolScreen = () => {
        <View style={[styles.viewButton, {flex: 1}]}>
        <Button title='1'/>
        </View>
-       <View style={styles.space}></View>
-       <View style={styles.space}></View>
-       <View style={styles.space}></View>
-       <View style={styles.space}></View>
+       <View style={styles.space2}></View>
+      
        </View>
 
        <View style={[styles.viewButtonFinish, {flex:1}]}>
@@ -162,5 +169,11 @@ viewButtonFinish: {
 },
 space: {
     height: 10
+},
+space2: {
+  height: 50
+},
+button:{
+  color: '#000000'
 }
 })
